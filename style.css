@@ -121,6 +121,9 @@ html, body {
   }
 }
 
+.gametext {
+  width:40%;
+}
 @media (max-width: 576px) {
 .carousel-caption {
   position:absolute;
