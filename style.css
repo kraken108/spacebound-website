@@ -26,35 +26,39 @@ html, body {
 }
 .carousel-caption {
   position:absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  height:100%;
+  top: 0;
 }
 
 .carousel-caption h1{
-  font-size: 500%;
+  font-size: 450%;
   text-transform: uppercase;
   text-shadow: 1px 1px 15px #000;
 }
 
-.carousel-caption h3{
-  font-size: 200%;
-  font-weight: 500;
-  text-shadow: 1px 1px 10px #000;
-  padding-bottom: 1rem;
-}
-
 .btn-primary {
-  background-color: #6648b1;
-  border: 1px solid #563d7c;
+  background-color: #0179f7;
+  border: 1px solid #0055af;
 }
 
 .btn-primary:hover {
-    background-color: #563d7c;
-    border: 1px solid #563d7c;
+  background-color: #0055af;
+  border: 1px solid #0055af;
+}
+
+.newclass {
+  position:absolute;
+  bottom:5%;
+  right:0;
+  left:0;
+}
+
+.display-4 {
+  font-size:250%;
 }
 .social a {
-  font-size:4.5em;
-  padding:3rem;
+  font-size:3em;
+  padding:1.5rem;
 }
 
 .fa-facebook {
@@ -84,12 +88,66 @@ html, body {
 /*---Media Queries --*/
 @media (max-width: 992px) {
 
-  }
-@media (max-width: 768px) {
-  
 }
+
+@media (max-width: 768px) {
+.carousel-caption {
+  position:absolute;
+  top: 0;
+}
+
+  .carousel-caption h1{
+    font-size: 350%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 15px #000;
+  }
+
+  .carousel-caption h3{
+    font-size: 140%;
+    font-weight: 400;
+    padding-bottom: .2rem;
+  }
+
+  .carousel-caption .btn {
+    font-size:95%;
+  }
+
+  .display-4 {
+    font-size:200%;
+  }
+  .social a {
+    font-size:2.3rem;
+    padding:1rem;
+  }
+}
+
 @media (max-width: 576px) {
-  
+.carousel-caption {
+  position:absolute;
+  top: 0;
+}
+  .carousel-caption h1{
+    font-size: 200%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 15px #000;
+  }
+  .carousel-caption h3{
+    font-size: 100%;
+    font-weight: 300;
+    padding-bottom: .2rem;
+  }
+
+  .carousel-caption .btn {
+    font-size:75%;
+  }
+
+  .display-4 {
+    font-size:160%;
+  }
+  .social a {
+    font-size:1.7rem;
+    padding:.7rem;
+  }
 }
 
 
@@ -127,12 +185,12 @@ figure {
   background-size: cover;
   background-position: center center;
   -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  transform: translateZ(0);
   will-change: transform;
 }
 /*--- Bootstrap Padding Fix --*/
 [class*="col-"] {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 
