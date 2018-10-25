@@ -122,7 +122,7 @@ html, body {
 }
 
 .gametext {
-  width:40%;
+  width:300px;
 }
 @media (max-width: 576px) {
 .carousel-caption {
@@ -216,11 +216,3 @@ Large (lg) devices (desktops, 992px and up)
 Extra (xl) large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 */
-
-
-
-
-
-
-
-
