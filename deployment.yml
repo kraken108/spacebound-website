@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: spacebound-website
+  name: spacebound-website
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+    name: http
+  selector:
+    app: spacebound-website
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spacebound-website
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spacebound-website
+  template:
+    metadata:
+      labels:
+        app: spacebound-website
+    spec:
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - image: registry.gitlab.com/spacebound-studios/spacebound-website
+        imagePullPolicy: Always
+        name: spacebound-website
+        ports:
+          - containerPort: 80
+            name: http
